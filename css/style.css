@@ -2,42 +2,70 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
  */
 @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-:root{
+:root {
     --bg: #212429;
-    --chrome:#fcc419;
-    --wblue:#c5f6fa;
+    --chrome: #fcc419;
+    --wblue: #c5f6fa;
     --gold: #C58754;
-
 }
 
 * {
     margin: 0%;
     padding: 0%;
     overflow-x: hidden;
-    
+    --webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
     /* background: linear-gradient(90deg ,#212429,#c5f6fa); */
     background-color: var(--bg);
 }
 
-.navbar {
-    border: 1px solid #C58754;
-    display: flex;
-    flex-direction: column;
-    float: right;
-    width: 50px;
-    height: 92vh;
+.primary-sec {
+    background-color: var(--bg);
+    height: 45rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 }
 
-.nav-links{
+
+header {
+    float: right;
+    margin-top: 1.5rem;
+}
+
+.main-sec {
+    padding: 0px 15px;
+    margin: 14px auto;
+    width: 45rem;
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+
+}
+
+.navigation-tool a {
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 3.2rem;
+    color: var(--gold);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+
+.navigation-tool a:hover {
+    color: white;
+}
+
+.nav-links {
     display: flex;
     justify-content: space-around;
     width: 40%;
     height: 20%;
     border: 2px solid red;
-    
+
 }
+
 .nav-links li {
     list-style: none;
 }
@@ -51,16 +79,14 @@
     padding: 11px 11px;
 }
 
-.navbar li {
-    float: left;
-}
 
 .logo-box {
+    z-index: 90;
     margin: 2px 2px;
     padding: 60px 26px;
-    display: inline-flex;
+    display: block;
     flex-direction: column;
-    background-color: #ffffff;
+    background: var(--bg);
     color: aliceblue;
     border-radius: 0px 0px 19px 0px;
     font-weight: bold;
@@ -70,75 +96,141 @@
     width: 40px;
     height: 500px;
     background-color: #212529;
+    position: absolute;
 }
 
-.logo-box h4{
+.logo-box h4 {
+    background: var(--bg);
     padding: 0px 0px 30px 0px;
     margin: 6px -16px;
     font-family: 'Great Vibes', cursive;
     font-size: 68%;
+    transition: all .5s;
 }
 
-.logo-box h4:hover{
+.logo-box h4:hover {
     color: #f50052;
-    
+    cursor: pointer;
 }
 
-.head{
-    /* border: 2px solid whitesmoke; */
+/* .profile-head{
+    background: var(--bg);
+    position: relative;
+    width: 35%;
+    margin: -23rem 0rem 0rem 11rem;
+} */
 
-    display: inline-grid;
-    text-align:left;
-    margin: 24px 146px;
-    padding: 11px 23px;
+.image-sec {
+    width: 300px;
+    height: 300px;
+    margin: 6rem 0rem 0rem 61rem;
+    display: block;
+    overflow: hidden;
 }
 
-.head h2{
-    color: aliceblue;
-    
+img {
+    width: 300px;
+    height: 306px;
+    margin: 0rem 0.2rem;
 }
 
-.head>h1{
+.profile_desc{
+    width: 100%;
+    margin-top: 8rem;
+}
+
+
+
+.profile-head {
+    background-color: var(--bg);
+    text-align: left;
+    margin: -21rem 0rem 0rem 18rem;
+    display: inherit;
+    width: 420px;
+}
+
+.profile-head h2 {
+    color: white;
+    font-family: 'Tourney', cursive;
+    font-size: 2.5em;
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+/* emoji animation */
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+
+.profile-head>h1 {
     font-size: 74px;
     color: #f50052;
     font-size: 50px;
     font-family: 'Tourney', cursive;
 }
 
-/* .social-bar{
-    border: 2px solid #C58754;
+.desc {
+    /* border: 2px solid white; */
+    display: block;
+    width: auto;
+    background: var(--bg);
+    color: whitesmoke;
+    margin: 3rem 17rem;
+    padding: 1.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.2rem;
+    height: 133px;
+    border-radius: 23px;
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    font-size: 1.2rem;
+}
 
-    display: flex;
-    flex-direction: column;
-    width: 56px;
-    
-    
-    margin: -45px 0px 0px 0px;
-    padding: 30px;
-} */
-
-.media{
-    margin: auto;
-    padding: 67px 7px 0px;
-} */
-/* /* .insta{
+.media {
     margin: auto;
     padding: 67px 7px 0px;
 }
-.github{
-    margin: auto;
-    padding: 67px 7px 0px;
-}
-.twitter{
-    margin: auto;
-    padding: 67px 7px 0px;
-}
-.linkedin{
-    margin: auto;
-    padding: 67px 7px 0px;
-} */
 
-a{
+*/ a {
     position: relative;
     width: 60px;
     height: 60px;
@@ -155,18 +247,18 @@ a{
 
 }
 
-.item ul a{
-     margin: 11px 0px 6px -34px;
-     padding : 16px 0px 0px 8px;
-    
+.item ul a {
+    margin: 11px 0px 6px -34px;
+    padding: 16px 0px 0px 8px;
+
 }
 
-.social-icons{
+.social-icons {
     height: 70%;
-    width: 80px;
+    width: 50px;
 }
 
-.social-icons .fab{
+.social-icons .fab {
     margin: 45px 8px;
     font-size: 30px;
     color: var(--gold);
@@ -174,123 +266,53 @@ a{
     border-radius: 5px;
 }
 
-.fa-twitter:hover{
+.fa-twitter:hover {
     color: turquoise;
 }
 
-.fa-instagram:hover{
+.fa-instagram:hover {
     color: rgb(230, 13, 85);
 }
 
-.fa-github:hover{
+.fa-github:hover {
     color: white;
 }
 
-.fa-linkedin:hover{
+.fa-linkedin:hover {
     color: rgb(82, 120, 245);
 }
 
-.item img{
+.item img {
     width: 31px;
     height: 30px;
     margin: 25px 35px;
     padding: 15px 0px;
 }
 
-.box{
-    /* border:2px solid chartreuse; */
+.box {
     display: inline-block;
     height: 100px;
     width: 200px;
     position: fixed;
     padding: 2em 1em 0em 2em;
     margin: 15em 0em 0em -25em;
-
 }
 
-button{
-    border-radius: 5px;
-    height: 50px;
-    width: 95px;
-    position: relative;
-    top: 15em;
-    left: 1em;
-}
-button a{
-    text-decoration: none;
-}
-.but{
-    margin: -26em 47em -6em 16em;
-    
-    display: flex;
-    width: 100px;
-    padding: 8px 12px;
+/* second half of project */
 
-}
-
-
-button:hover{
-    border-radius: 40px;
-    border: 1px solid brown
-}
-
-.desc{
-    border: 2px solid white;
-    color: whitesmoke;
-    margin: 37px auto 3px 254px;
-    padding: 26px 15px 21px 21px;
-    width: 300px;
-    display: inline-block;
-    height: 218px;
-    border-radius: 23px;
-    font-family:'Raleway', sans-serif;
-
-}
-
-.image{
-   
-    height: 227px;
-    margin: -24rem 0rem 0rem 56rem;
-    width: 316px;
-}
-
-.image img{
-    border-radius: 357px;
-    width: 22em;
-    height: 20em;
-    display: inline-block;
-    position:absolute;
-    top: 8em;
-    transition: transform 1s ease, filter 1s ease;
-    filter: grayscale(100%);
-}
-
-.image img:hover{
-    transform: scale(1.10);
-    filter: grayscale(0%);
-}
-
-
-.line{
-    margin: 0rem 0rem;
-}
-
-
-.projects{
+/* .projects {
     display: flex;
     flex-direction: row;
-    /* border: 2px solid gray; */
-    margin: 29rem 0rem 0rem 0rem;
+    border: 2px solid gray;
+    margin: 6rem 0rem;
     padding: 4rem 0rem 0rem 0rem;
     height: 450px;
-    position: sticky;
-    width: 1670px;
-
-}
+    width: 1512px;
+} */
 
 
 
-.proj h2{
+/* .proj h2 {
     color: #a1ff0a;
     font-size: 50px;
     display: inline-block;
@@ -299,61 +321,49 @@ button:hover{
     position: absolute;
 }
 
-.projects ,proj-1 ,proj-2, proj-3{
+.projects,
+proj-1,
+proj-2,
+proj-3 {
     color: var(--bg);
 }
 
-
-.projects h4{
-    color: #FCC419;
-    background-color: #837569;
-    margin: 1rem 6.5rem;
-    font-weight: 50%;
-}
-
-.proj-1{
+.proj-1 {
     border: 2px solid white;
-    background-color:#837569;
-    /* opacity: 60%; */
+    background-color: #837569;
     width: 350px;
     height: 285px;
     margin: 1rem 4rem;
     padding: 25px 17px 23px 27px;
-    border-radius:0px 0px  0px 21px;
-}
-.proj-2{
-    border: 2px solid white;
-    background-color:#837569;
-    /* opacity: 60%; */
-    width: 350px;
-    height: 285px;
-    margin: 1rem 3rem;
-    padding: 25px 17px 23px 27px;
-    border-radius:0px 0px 0px 21px;
-}
-.proj-3{
-    border: 2px solid  white;
-    background-color:#837569;
-    /* opacity: 60%;     */
-    width: 350px;
-    height: 285px;
-    margin: 1rem 3rem;
-    padding: 25px 17px 23px 27px;
-    border-radius:0px 0px 0px 21px;
+    border-radius: 0px 0px 0px 21px;
 }
 
-.proj-1:hover{
+.proj-2 {
+    border: 2px solid white;
+    background-color: #837569;
+    width: 350px;
+    height: 285px;
+    margin: 1rem 3rem;
+    padding: 25px 17px 23px 27px;
+    border-radius: 0px 0px 0px 21px;
+}
+
+.proj-3 {
+    border: 2px solid white;
+    background-color: #837569;
+    width: 350px;
+    height: 285px;
+    margin: 1rem 3rem;
+    padding: 25px 17px 23px 27px;
+    border-radius: 0px 0px 0px 21px;
+}
+
+.proj-1:hover {
     animation: ease-in-out(6s);
 
-}
+} */
 
-header{
-    display: inline-block;
-    color: var(--wblue);
-    
-}
-
-.navpro{
+/* .navpro {
     margin: 7rem 13rem;
     padding: 0rem 0rem;
     position: relative;
@@ -362,4 +372,37 @@ header{
     background-color: lightgray;
 }
 
+.last-para {
+    text-align: center;
+    position: relative;
+}
 
+.last-para h2 {
+    margin-top: .3rem;
+    font-size: 2.5rem;
+    color: yellowgreen;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.tab ul {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+    line-height: 2.5rem;
+} */
+
+footer {
+    margin-top: 2rem;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.footer-class {
+    height: 30px;
+    background-color: #f50052;
+    font-size: 1.2rem;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
